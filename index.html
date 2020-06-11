@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>“Reincarnation Zero”</title>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://vr-ugar.github.io/portals/portals.js"></script>
+	<script src="https://vr-ugar.github.io/portals/aim.js"></script>
+	<script src="https://vr-ugar.github.io/portals/a-portal.js"></script>
+  </head>
+  
+  <body>
+    <a-scene background="color: orange" loading-screen="dotsColor: orange; backgroundColor: black">
+      <a-assets>
+		  <img id="1" src="assets/zero1.jpg">
+	      <img id="2" src="assets/zero2.jpg">
+	      <img id="3" src="assets/zero3.jpg">
+	      <img id="4" src="assets/zero4.jpg">
+	      <img id="5" src="assets/zero5.jpg">
+		  <img id="6" src="assets/zero6.jpg">
+		  <img id="7" src="assets/zero7.jpg">
+	      
+          <audio id="sound" src="assets/KOYLA.mp3" preload="auto" loop="true"></audio>
+      </a-assets>
+
+      <a-camera position="0 0 0" wasd-controls="enabled: false">
+		<a-cursor visible="true" color="red"></a-cursor>
+	  	
+	  	<!-- comment out the next line when done -->
+	  	<!-- a-entity position="0 0 -10" aim --> 
+
+      <a-sound src="#sound" autoplay="true" loop="true" positional="false" position="0 2 -1"></a-sound>
+      </a-camera>
+
+		<a-entity id="loc_1" visible="true">
+			<a-sky material="src: #1"></a-sky>
+
+			<a-portal
+				to="loc_2"
+				src="#2"
+				position="4.46 -2.86 -8.48"
+				>
+			</a-portal>
+			
+			<a-portal
+				to="loc_7"
+				src="#7"
+				position="5.26 -3.35 7.82"
+				>
+			</a-portal>
+
+		</a-entity>
+
+
+		<a-entity id="loc_2" visible="false">
+			<a-sky material="src: #2"></a-sky>
+
+			<a-portal
+				to="loc_1"
+				src="#1"
+				position="4.47 -3.01 8.42"
+				>
+			</a-portal>
+
+			<a-portal
+				to="loc_3"
+				src="#3"
+				position="4.7 -0.64 -8.81"
+				>
+			</a-portal>
+
+		</a-entity>
+
+
+		<a-entity id="loc_3" visible="false">
+			<a-sky material="src: #3"></a-sky>
+
+			<a-portal
+				to="loc_2"
+				src="#2"
+				position="4.77 -0.68 8.76"
+				>
+			</a-portal>
+			
+			<a-portal
+				to="loc_4"
+				src="#4"
+				position="4.36 -0.52 -8.98"
+				>
+			</a-portal>
+			
+		</a-entity>
+
+
+		<a-entity id="loc_4" visible="false">
+			<a-sky material="src: #4"></a-sky>
+
+			<a-portal
+				to="loc_3"
+				src="#3"
+				position="4.59 -2.08 8.64"
+				>
+			</a-portal>
+			
+			<a-portal
+				to="loc_5"
+				src="#5"
+				position="5.2 -0.56 -8.52"
+				>
+			</a-portal>
+
+		</a-entity>
+
+
+		<a-entity id="loc_5" visible="false">
+			<a-sky material="src: #5"></a-sky>
+
+			<a-portal
+				to="loc_4"
+				src="#4"
+				position="5.44 -3.22 7.75"
+				>
+			</a-portal>
+			
+			<a-portal
+				to="loc_6"
+				src="#6"
+				position="4.06 -3.41 -8.48"
+				>
+			</a-portal>
+
+		</a-entity>
+		
+		<a-entity id="loc_6" visible="false">
+			<a-sky material="src: #6"></a-sky>
+
+			<a-portal
+				to="loc_5"
+				src="#5"
+				position="6.34 -3.73 6.77"
+				>
+			</a-portal>
+			
+			<a-portal
+				to="loc_7"
+				src="#7"
+				position="3.79 -3.24 -8.67"
+				>
+			</a-portal>
+
+		</a-entity>
+		
+		<a-entity id="loc_7" visible="false">
+			<a-sky material="src: #7"></a-sky>
+
+			<a-portal
+				to="loc_6"
+				src="#6"
+				position="4.89 -2.03 8.49"
+				>
+			</a-portal>
+			
+			<a-portal
+				to="loc_1"
+				src="#1"
+				position="4.69 -2.38 -8.51"
+				>
+			</a-portal>
+
+		</a-entity>
+		
+    </a-scene>
+  </body>
+</html>
